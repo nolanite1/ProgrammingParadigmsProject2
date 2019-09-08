@@ -1,3 +1,4 @@
+// test class provided by instructor
 public class AutoTest {
     public static void main(String[] args){
         GasTank tank = new GasTank(10);
