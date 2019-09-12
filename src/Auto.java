@@ -28,7 +28,7 @@ public class Auto{
     public double getFuelLevel(){
         return this.gasTank.getLevel();
     }
-    public double getMPG(){
+    public int getMPG(){
         return this.engine.getMpg();
     }
     public int getMaxSpeed(){
@@ -41,7 +41,7 @@ public class Auto{
         this.gasTank.setLevel(this.gasTank.getCapacity());
     }
     public double drive(int distance, double xRatio, double yRatio){
-        double gallonsUsed = distance / this.getMPG();
+        double gallonsUsed = distance / (double) this.getMPG();
         if(gallonsUsed > this.getFuelLevel()){
             distance = (int) (this.getFuelLevel() * this.getMPG());
             gallonsUsed = this.getFuelLevel();
